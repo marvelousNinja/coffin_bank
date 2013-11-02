@@ -1,28 +1,16 @@
-== README
+== Coffin Bank
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simplified version of banking system.
+It helps to provide so-called 'loan' services.
 
-Things you may want to cover:
+Here is also what you need to know:
 
-* Ruby version
+* Ruby version: 2.0.0-p247 (specified in .ruby-version along with gemset in .ruby-gemset)
+* Database: PostgreSQL 9.2. App is going to use your system account to connect to DB.
 
-* System dependencies
+To start working do the following:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Create required databases: rake db:create db:schema:load db:seed db:test:prepare
+* Run the specs: rake rspec
+* rails s
+* PROFIT!!!
