@@ -17,3 +17,5 @@ gem 'rspec-rails'
 
 gem 'devise'
 gem 'cancan'
+
+gem 'enumerize'
