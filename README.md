@@ -19,6 +19,7 @@ To start working do the following:
   create role USERNAME login password 'USERNAME!PASSWORD' superuser;
   \q
 ```
+
 * Create required databases:```rake db:create db:schema:load db:seed db:test:prepare```
 * Run the specs: ```rake rspec```
 * Run the server: ```rails s```
