@@ -19,3 +19,5 @@ gem 'devise'
 gem 'cancan'
 
 gem 'enumerize'
+
+gem 'rails_admin'
