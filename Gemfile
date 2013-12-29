@@ -16,3 +16,4 @@ gem 'jbuilder', '~> 1.2'
 gem 'rspec-rails'
 
 gem 'devise'
+gem 'cancan'
