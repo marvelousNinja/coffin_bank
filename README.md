@@ -9,14 +9,16 @@ Here is also what you need to know:
 * Database: PostgreSQL 9.2. App is going to use your system account to connect to DB.
 
 To start working do the following:
-* Create database user:
+* Clone this repository.
+* Install required Ruby version (in command line):```rvm install ruby-2.0.0-p247```
+* cd into repository and install required gems and libraries:```bundle```
+* Create database user (in command line):
 ```
   sudo su postgres
   psql
   create role USERNAME login password 'USERNAME!PASSWORD' superuser;
   \q
 ```
-
 * Create required databases:```rake db:create db:schema:load db:seed db:test:prepare```
 * Run the specs: ```rake rspec```
 * Run the server: ```rails s```
