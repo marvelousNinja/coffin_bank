@@ -1,4 +1,4 @@
 class Operation < ActiveRecord::Base
-  belongs_to :account, as: :debit_account
-  belongs_to :account, as: :credit_account
+  belongs_to :account, foreign_key: :debit_account_id
+  belongs_to :account, foreign_key: :credit_account_id
 end
