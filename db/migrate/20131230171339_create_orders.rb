@@ -4,7 +4,9 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :user_id, null: false, unique: true
       t.integer :credit_product_id, null: false, unique: true
       t.decimal :sum, null: false, default: 0
+      t.int :time, null: false
       t.boolean :is_checked, null: false, default: false
+      t.boolean :is_approved, null: false
 
       t.timestamps
     end

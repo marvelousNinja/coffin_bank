@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131231180921) do
+ActiveRecord::Schema.define(version: 20140107194311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,28 @@ ActiveRecord::Schema.define(version: 20131231180921) do
 
   add_index "orders", ["credit_product_id"], name: "index_orders_on_credit_product_id", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
+
+  create_table "plan_pays", force: true do |t|
+    t.date     "pay_day",         null: false
+    t.decimal  "sum",             null: false
+    t.boolean  "is_extinguished", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "plan_pays", ["is_extinguished"], name: "index_plan_pays_on_is_extinguished", using: :btree
+  add_index "plan_pays", ["pay_day"], name: "index_plan_pays_on_pay_day", using: :btree
+
+  create_table "profiles", force: true do |t|
+    t.string   "first_name",      null: false
+    t.string   "middle_name",     null: false
+    t.string   "last_name",       null: false
+    t.string   "passport_series", null: false
+    t.string   "passport_number", null: false
+    t.string   "phone_number",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",       null: false
